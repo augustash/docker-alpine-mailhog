@@ -1,0 +1,15 @@
+#!/usr/bin/with-contenv bash
+
+MAIL_STORAGE=${MAIL_STORAGE:-"memory"}
+MAIL_API_PORT=${MAIL_API_PORT:-"8025"}
+MAIL_SMTP_PORT=${MAIL_SMTP_PORT:-"1025"}
+MAIL_HOSTNAME=${MAIL_HOSTNAME:-"mailhog.dev"}
+MAIL_PARAMS=${MAIL_PARAMS:-}
+
+exec \
+    /usr/local/bin/mailhog \
+        -storage ${MAIL_STORAGE} \
+        -api-bind-addr 0.0.0.0:${MAIL_API_PORT} \
+        -smtp-bind-addr 0.0.0.0:${MAIL_SMTP_PORT} \
+        -hostname ${MAIL_HOSTNAME} \
+        ${MAIL_PARAMS}

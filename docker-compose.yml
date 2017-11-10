@@ -1,0 +1,9 @@
+version: "3"
+services:
+  alpine-mailhog:
+    build:
+      context: .
+    image: augustash/alpine-mailhog
+    labels:
+      - "com.augustash.description=August Ash Alpine MailHog Image"
+      - "com.augustash.development-only"
