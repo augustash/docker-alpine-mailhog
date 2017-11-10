@@ -29,7 +29,7 @@ You must direct email to the running container and that can be done by SMTP or `
 For example, in your `php.ini` configuration you can use the following line:
 
 ```bash
-sendmail_path = /usr/sbin/sendmail -S mail:1025
+sendmail_path = /usr/sbin/sendmail -S <CONTAINER NAME/IP>:1025
 ```
 
 Alternatively you can look into MailHog's `sendmail` replacement called [mhsendmail](https://github.com/mailhog/mhsendmail). If installed, it can be used like this:
