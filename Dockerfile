@@ -1,4 +1,4 @@
-FROM augustash/alpine-base-s6:1.0.0
+FROM augustash/alpine-base-s6:1.0.1
 
 # envrionment
 ENV GOPATH "/root/go"
