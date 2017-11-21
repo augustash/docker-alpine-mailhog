@@ -13,7 +13,7 @@ RUN apk-install --virtual build-dependencies build-base go git && \
     go get github.com/mailhog/MailHog && \
     mv ${GOPATH}/bin/MailHog /usr/local/bin/mailhog && \
     rm -rf ${GOPATH} && \
-    apk del --purge build-dependencies build-base && \
+    apk-remove build-dependencies build-base && \
     apk-cleanup
 
 # copy root filesystem
