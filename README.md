@@ -6,7 +6,8 @@
 
 ## Versions
 
-- `1.0.2`, `latest` [(Dockerfile)](https://github.com/augustash/docker-alpine-mailhog/blob/1.0.2/Dockerfile)
+- `2.0.0`, `latest` [(Dockerfile)](https://github.com/augustash/docker-alpine-mailhog/blob/2.0.0/Dockerfile)
+- `1.0.2` [(Dockerfile)](https://github.com/augustash/docker-alpine-mailhog/blob/1.0.2/Dockerfile)
 - `1.0.1` [(Dockerfile)](https://github.com/augustash/docker-alpine-mailhog/blob/1.0.1/Dockerfile)
 - `1.0.0` [(Dockerfile)](https://github.com/augustash/docker-alpine-mailhog/blob/1.0.0/Dockerfile)
 
@@ -37,12 +38,12 @@ sendmail_path = /usr/sbin/sendmail -S <CONTAINER NAME/IP>:1025
 Alternatively you can look into MailHog's `sendmail` replacement called [mhsendmail](https://github.com/mailhog/mhsendmail). If installed, it can be used like this:
 
 ```bash
-sendmail_path = /usr/local/bin/mhsendmail
+sendmail_path = /usr/local/go/bin/mhsendmail --smtp-addr <CONTAINER NAME/IP>:1025
 ```
 
 ### Web UI
 
-Once running and capturing email, you can view the messages using the Web UI. If using the default hostname/ports, open a browser and visit [MailHog Web UI](http://mailhog.dev:8025).
+Once running and capturing email, you can view the messages using the Web UI. If using the default hostname/ports, open a browser and visit [MailHog Web UI](http://mailhog.test:8025).
 
 ### User/Group Identifiers
 
@@ -57,5 +58,5 @@ The following variables can be set and will change how the container behaves. Yo
 - `MAIL_STORAGE`=memory
 - `MAIL_SMTP_PORT`=1025
 - `MAIL_API_PORT`=8025
-- `MAIL_HOSTNAME`=mailhog.dev
+- `MAIL_HOSTNAME`=mailhog.test
 - `MAIL_PARAMS`=
