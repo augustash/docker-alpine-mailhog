@@ -3,7 +3,7 @@ services:
   alpine-mailhog:
     build:
       context: .
-    image: augustash/alpine-mailhog:2.0.0
+    image: augustash/alpine-mailhog:3.0.0
     labels:
       - "com.augustash.description=August Ash Alpine MailHog Image"
       - "com.augustash.development-only"
